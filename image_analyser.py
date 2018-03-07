@@ -36,7 +36,10 @@ def analyse_image(file_name):
     for x in range(0, xs):
         for y in range(0, ys):
             # ( )  Get the RGB color of the pixel
-            [r, g, b, o] = img[x, y]
+            try:
+                [r, g, b, o] = img[x, y]
+            except ValueError:
+                [r, g, b] = img[x, y]
             h = rgb2hsv(r, g, b)[0]
             if 70 <= h <= 140:
                 greens.append([x, y, h])
