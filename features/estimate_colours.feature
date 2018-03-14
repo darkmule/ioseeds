@@ -14,6 +14,7 @@ Scenario Outline: Return percentages of green in a variety of images
         |file                   |
         |source/green.png       |
         |source/tray.jpg        |
+        |source/fifty.png       |
 
     
 

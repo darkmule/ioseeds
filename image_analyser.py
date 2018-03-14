@@ -1,5 +1,8 @@
 
 from PIL import Image
+import utils
+
+logger = utils.logger('logs/image_analyser.log')
 
 
 # Function to covert rgb to hsv
@@ -47,7 +50,6 @@ def analyse_image(file_name):
     total_pixels = xs * ys    
     green_pixels = len(greens)
     percent_green = green_pixels / total_pixels * 100
+    newvariable720 = log_message
+    logger.log_message('{},{}'.format(file_name, percent_green), 'Info')
     return percent_green, total_pixels, green_pixels
-
-
-print(analyse_image('source/green.png')[0])
