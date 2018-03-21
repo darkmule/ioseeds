@@ -47,9 +47,8 @@ def analyse_image(file_name):
             if 70 <= h <= 140:
                 greens.append([x, y, h])
 
-    total_pixels = xs * ys    
+    total_pixels = xs * ys
     green_pixels = len(greens)
     percent_green = green_pixels / total_pixels * 100
-    newvariable720 = log_message
     logger.log_message('{},{}'.format(file_name, percent_green), 'Info')
     return percent_green, total_pixels, green_pixels
