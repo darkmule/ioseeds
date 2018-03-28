@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'markduell/jenks:1.0'
-    }
-    
-  }
+  agent none
   stages {
     stage('initialise') {
       steps {
