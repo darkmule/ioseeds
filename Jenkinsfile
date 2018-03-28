@@ -4,7 +4,8 @@ pipeline {
     stage('initialise') {
       steps {
         sh '''ls
-echo hello'''
+echo hello
+python -V'''
       }
     }
   }
